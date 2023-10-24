@@ -11,7 +11,7 @@ import java.util.Set;
 
 @Entity
 @Table
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Setter @NoArgsConstructor @AllArgsConstructor
 public class CourseType {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -19,4 +19,11 @@ public class CourseType {
     private String name;
     @OneToMany(mappedBy = "courseType")
     Set<Course> course;
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
 }

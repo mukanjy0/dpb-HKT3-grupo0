@@ -11,7 +11,7 @@ import java.util.Set;
 
 @Entity
 @Table
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Setter @NoArgsConstructor @AllArgsConstructor
 public class Professor {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,4 +22,24 @@ public class Professor {
     private String email;
     @OneToMany(mappedBy = "professor")
     Set<CourseAssessmentDetails> courseAssessmentDetails;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getFullName() {
+        return fullName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
 }

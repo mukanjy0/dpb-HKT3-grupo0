@@ -13,7 +13,7 @@ import java.util.Set;
 
 @Entity
 @Table
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Setter @NoArgsConstructor @AllArgsConstructor
 public class CourseAssessment {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -28,4 +28,32 @@ public class CourseAssessment {
     Periodo periodo;
     @OneToMany(mappedBy = "courseAssessment")
     Set<CourseAssessmentDetails> courseAssessmentDetails;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public String getTipoNota() {
+        return tipoNota;
+    }
+
+    public String getSumNota() {
+        return sumNota;
+    }
+
+    public String getNomenclatura() {
+        return nomenclatura;
+    }
+
+    public Course getCourse() {
+        return course;
+    }
+
+    public Periodo getPeriodo() {
+        return periodo;
+    }
 }

@@ -11,7 +11,7 @@ import java.util.Set;
 
 @Entity
 @Table
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Setter @NoArgsConstructor @AllArgsConstructor
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -22,4 +22,20 @@ public class Student {
     //private String area;
     @OneToMany(mappedBy = "student")
     Set<CourseAssessmentDetails> courseAssessmentDetails;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getCode() {
+        return code;
+    }
 }

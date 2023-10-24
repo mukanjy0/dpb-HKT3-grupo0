@@ -11,7 +11,7 @@ import java.util.Set;
 
 @Entity
 @Table
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Setter @NoArgsConstructor @AllArgsConstructor
 public class Periodo {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -20,4 +20,16 @@ public class Periodo {
     private String code;
     @OneToMany(mappedBy = "periodo")
     Set<CourseAssessment> courseAssessments;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getCode() {
+        return code;
+    }
 }

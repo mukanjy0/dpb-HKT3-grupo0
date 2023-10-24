@@ -13,7 +13,7 @@ import java.util.Set;
 
 @Entity
 @Table
-@Getter @Setter @NoArgsConstructor @AllArgsConstructor
+@Setter @NoArgsConstructor @AllArgsConstructor
 public class Course {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -30,4 +30,36 @@ public class Course {
     CourseType courseType;
     @OneToMany(mappedBy = "course")
     Set<CourseAssessment> courseAssessments;
+
+    public Long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public Integer getCredits() {
+        return credits;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public String getHRGroup() {
+        return HRGroup;
+    }
+
+    public String getVRGroup() {
+        return VRGroup;
+    }
+
+    public Integer getCycle() {
+        return cycle;
+    }
+
+    public CourseType getCourseType() {
+        return courseType;
+    }
 }

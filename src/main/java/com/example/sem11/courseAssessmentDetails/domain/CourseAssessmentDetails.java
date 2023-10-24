@@ -18,9 +18,9 @@ public class CourseAssessmentDetails {
     private Long id;
     private String score;
     private String section;
-    @ManyToOne
+    @ManyToOne(optional = false)
     Student student;
-    @ManyToOne
+    @ManyToOne(optional = false)
     Professor professor;
     @ManyToOne
     CourseAssessment courseAssessment;

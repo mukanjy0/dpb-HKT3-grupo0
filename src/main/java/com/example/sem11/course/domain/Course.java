@@ -26,7 +26,7 @@ public class Course {
     private Integer cycle;
 //    private String area;
 //    private String courseContent;
-    @ManyToOne
+    @ManyToOne(optional = false)
     CourseType courseType;
     @OneToMany(mappedBy = "course")
     Set<CourseAssessment> courseAssessments;

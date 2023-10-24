@@ -22,9 +22,9 @@ public class CourseAssessment {
     private String tipoNota;
     private String sumNota;
     private String nomenclatura;
-    @ManyToOne
+    @ManyToOne(optional = false)
     Course course;
-    @ManyToOne
+    @ManyToOne(optional = false)
     Periodo periodo;
     @OneToMany(mappedBy = "courseAssessment")
     Set<CourseAssessmentDetails> courseAssessmentDetails;

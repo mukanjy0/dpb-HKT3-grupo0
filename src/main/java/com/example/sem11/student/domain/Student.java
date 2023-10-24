@@ -19,7 +19,7 @@ public class Student {
     private String name;
     private String email;
     private String code;
-    private String area;
+    //private String area;
     @OneToMany(mappedBy = "student")
     Set<CourseAssessmentDetails> courseAssessmentDetails;
 }
